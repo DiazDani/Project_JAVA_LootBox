@@ -1,0 +1,28 @@
+ /*
+        String s;
+        String cvsSplitBy = ",";
+        BufferedReader br=null;
+        try{
+            br= new BufferedReader(new FileReader(rutaArxiu));
+            while ((s=br.readLine()) !=null){
+                    String[] values = s.split(cvsSplitBy);
+
+                for (int i =0; i <values.length;i++) {
+                    System.out.println(values[i]);
+                    if (i<values.length-1){
+                        System.out.print("\n");
+                    }
+                }
+                System.out.println();
+            }
+        }catch (IOException exc){
+            System.out.println("Ha petao algo. error: " + exc);
+        }finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }*/
