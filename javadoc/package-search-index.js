@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.justaraptorproductions.greedGame.altres"},{"l":"com.justaraptorproductions.greedGame.inici"},{"l":"com.justaraptorproductions.greedGame.objectes"},{"l":"com.justaraptorproductions.greedGame.objectes.cartes"}];updateSearchResults();

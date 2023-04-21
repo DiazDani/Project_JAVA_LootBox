@@ -39,24 +39,26 @@ public class Game {
                     
                     E) Sortir del programa
                     
-                    L) Cargar l'ultima partida guardada 
+                    L) Cargar l'ultima partida guardada.
                     (Cuidado! es perdran totes les dades sense guardar)
                     
-                    Indica la teva resporsta: """);
+                    """);
+            System.out.print("Si us plau, indiqueu la vostra resposta: ");
             resposta=kb.next().charAt(0);
             if(resposta=='a'||resposta=='A') {
                 System.out.println("\n\n\n\nBenvingut al joc!");
                 jugador.setVides(2);
                 jugador.setPuntsPartida(0);
                 while (jugador.estaViu()) {
-                    System.out.println("""
+                    System.out.print("""
                             \nPulsa C per treure una carta.
                             
                             Pulsa S per plantar-te amb els punts aconseguits. 
                             
                             Si perds totes les vides, perdrás tots els puns que hagis aconseguit durant la partida!
                             
-                            Indica la teva resposta: """);
+                            """);
+                    System.out.print("Si us plau, indiqueu la vostra resposta: ");
                     resposta=kb.next().charAt(0);
                     if (resposta == 'S' || resposta=='s') {
                         jugador.setPuntsTotals(jugador.getPuntsPartida());
@@ -68,7 +70,7 @@ public class Game {
                         System.out.println("Selecciona una opció valida.");
                     }
                 }
-
+                System.out.println("Final de partida. ");
             }
             else if (resposta=='g'||resposta=='G'){
                 jugador.guardarDades();
@@ -80,7 +82,7 @@ public class Game {
                 jugador.recuperarDades(jugador);
             }
             else{
-                System.out.println("Introdueix un caracter valid");
+                System.out.println("\nIntrodueix un caracter valid");
             }
 
         }

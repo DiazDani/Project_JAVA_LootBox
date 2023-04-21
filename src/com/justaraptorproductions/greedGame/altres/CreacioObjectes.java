@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Clase que crea el mazo de cartes i llegeix el CSV per crear els objectes
+ */
 public class CreacioObjectes {
 
     private List <Carta> mazo= new ArrayList<>();

@@ -3,7 +3,7 @@ package com.justaraptorproductions.greedGame.objectes.cartes;
 import com.justaraptorproductions.greedGame.objectes.Jugador;
 
 /**
- * Metode abstracte del que deriven els diferents tipus de cartes.
+ * Clase abstracte del que deriven els diferents tipus de cartes.
  * Cada carta te un nom, un tipus, un preu i una descripcio.
  */
 public abstract class Carta {

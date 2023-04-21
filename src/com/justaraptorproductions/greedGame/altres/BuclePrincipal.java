@@ -6,7 +6,7 @@ import com.justaraptorproductions.greedGame.objectes.Jugador;
 import java.util.Random;
 
 /**
- * Metode que aplica i mostra per pantalla de forma aleatoria una de les cartes del mazo.
+ * Clase que aplica i mostra per pantalla de forma aleatoria una de les cartes del mazo.
  */
 public class BuclePrincipal {
     public static Random rng= new Random(System.currentTimeMillis());
@@ -14,7 +14,7 @@ public class BuclePrincipal {
 
     /**
      * @param jugador
-     * Jugador. A aquest obgecte se li aplicaran els diferents efectes de les cartes.
+     * Jugador. A aquest objecte se li aplicaran els diferents efectes de les cartes.
      * @param creacioObjectes
      * Mazo de cartes del joc. D'aqui es treuen les diferentes cartes.
      */
