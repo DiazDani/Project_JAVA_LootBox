@@ -1,23 +1,34 @@
 package com.justaraptorproductions.greedGame.objectes;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Scanner;
 
+/**
+ * Clase que defineix al jugador. El jugador tindrá un nom, una puntuacio total, una puntuacio de partida i unes vides.
+ *
+ */
 public class Jugador {
     private String nom;
     private int puntsTotals;
     private int puntsPartida;
     private int vides;
 
-    public Jugador(String nom,int puntsTotals) {
+    /**
+     * Constructor del jugador
+     * @param nom
+     * Nom del jugador
+     */
+    public Jugador(String nom) {
         this.nom = nom;
-        this.puntsTotals = puntsTotals;
+        this.puntsTotals = 0;
         this.puntsPartida = 0;
         this.vides = 2;
 
     }
+    /**
+     * Getters i setters.
+     * Setter de puntsTotals suma els punts actuals més els que se li pasen per parametre.
+     */
 
     public String getNom() {
         return nom;
@@ -32,7 +43,7 @@ public class Jugador {
     }
 
     public void setPuntsTotals(int puntsTotals) {
-        this.puntsTotals = this.puntsPartida+puntsTotals;
+        this.puntsTotals = this.puntsTotals+puntsTotals;
     }
 
     public int getPuntsPartida() {
@@ -51,6 +62,11 @@ public class Jugador {
         this.vides = vides;
     }
 
+    /**
+     * Metode que comproba si el jugador esta viu o no. Si no li queden vides, retorna false
+     * @return
+     * Si es true, el jugador segueix viu.
+     */
     public boolean estaViu(){
         if(this.getVides()>0){
             return true;
@@ -60,6 +76,9 @@ public class Jugador {
         }
     }
 
+    /**
+     * Metode que guarda les dades a un document. Guarda el nom i la puntuacio Total del jugador.
+     */
     public void guardarDades() {
         try {
 
@@ -78,24 +97,31 @@ public class Jugador {
         }
     }
 
-    public static Jugador carregarPartida(String archivo) {
+    /**
+     * Recupera les dades del documet de text i cambia el nom i el cognom de la ultima entrada del document.
+     * @param jugador
+     * Jugador al que se li apliquen els punt i el nom.
+     */
+    public void recuperarDades(Jugador jugador) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader(archivo));
-            String ultimaLinea = "";
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                ultimaLinea = linea;
+            File file = new File("files/guardarPartida.txt");
+            Scanner scanner = new Scanner(file);
+
+            String lastLine = "";
+            while (scanner.hasNextLine()) {
+                lastLine = scanner.nextLine();
             }
-            String[] datos = ultimaLinea.split(",");
-            String nombre = datos[0];
-            int puntos = Integer.parseInt(datos[1]);
-            return new Jugador(nombre, puntos);
-        } catch (IOException e) {
-            System.out.println("Error al leer el archivo");
-            e.printStackTrace();
-            return null;
+
+            String[] parts = lastLine.split(",");
+            jugador.setNom(parts[0]);
+            jugador.setPuntsTotals(Integer.parseInt(parts[1]));
+
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("No s'ha pogut recuperar les dades.");
         }
     }
+
 
 
 }

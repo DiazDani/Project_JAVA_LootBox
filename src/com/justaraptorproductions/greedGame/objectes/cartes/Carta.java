@@ -2,6 +2,10 @@ package com.justaraptorproductions.greedGame.objectes.cartes;
 
 import com.justaraptorproductions.greedGame.objectes.Jugador;
 
+/**
+ * Metode abstracte del que deriven els diferents tipus de cartes.
+ * Cada carta te un nom, un tipus, un preu i una descripcio.
+ */
 public abstract class Carta {
     private String nom;
     private String tipus;
@@ -9,6 +13,15 @@ public abstract class Carta {
 
     private String descripcio;
 
+    /**
+     * Constructor
+     * @param tipus
+     * Tipus de la carta
+     * @param preu
+     * Punts que dona la carta
+     * @param descripcio
+     * Descripció de la carta
+     */
     public Carta( String tipus, int preu, String descripcio) {
         this.nom = "<UNDEFINED>";
         this.tipus = tipus;
@@ -17,7 +30,9 @@ public abstract class Carta {
     }
 
 
-    /*GETTERS I SETTES*/
+    /**
+     *Getters i setters.
+     */
     public String getNom() {
         return nom;
     }
@@ -50,27 +65,39 @@ public abstract class Carta {
         this.descripcio = descripcio;
     }
 
-    /*METODES A SOBRESCRIURE*/
+    /**
+     * Metode que es sobreescriu per donar un efecte a una carta
+     * @param jugador
+     * Jugador al que se li apica l'efecte
+     */
+
     public void efecte(Jugador jugador){
-        //aqui afegirem les funcions de les cartes especials (ex: bomba)
+
     }
+
+    /**
+     * Metode que aplica la suma o resta de punts a un jugador, a més de l'efecte de la carta
+     * @param jugador
+     * Jugador al que se li aplica
+     * @param carta
+     * carta que aplica el canvi.
+     */
     public void puntuacioPartida(Jugador jugador, Carta carta){
         carta.efecte(jugador);
         jugador.setPuntsPartida(jugador.getPuntsPartida()+carta.getPreu());
     }
 
-    /*ALTRES METODES*/
 
-    public void puntuacioTotal(Jugador jugador){
-        jugador.setPuntsTotals(jugador.getPuntsTotals()+ jugador.getPuntsPartida());
-    }
-
+    /**
+     * @return
+     * Metode que retorna les dades de la carta
+     */
     @Override
     public String toString() {
         return "-----------------" +
-                "\n  " + nom + '\'' +
+                "\n  " + nom  +
                 "\n-----------------" +
                 "\n  " + preu +" punts" +
-                "\n  efecte: "  +descripcio ;
+                "\n\n  "  +descripcio ;
     }
 }
