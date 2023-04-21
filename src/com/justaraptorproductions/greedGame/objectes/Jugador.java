@@ -32,7 +32,7 @@ public class Jugador {
     }
 
     public void setPuntsTotals(int puntsTotals) {
-        this.puntsTotals = puntsTotals;
+        this.puntsTotals = this.puntsPartida+puntsTotals;
     }
 
     public int getPuntsPartida() {
@@ -59,20 +59,21 @@ public class Jugador {
             return false;
         }
     }
-    public void guardarDatos() {
+
+    public void guardarDades() {
         try {
-            // Abre el archivo jugador.txt en modo de añadir texto
+
             FileWriter writer = new FileWriter("files/guardarPartida.txt", true);
 
-            // Escribe el nombre y los puntos totales del jugador en una línea separada por un espacio
-            writer.write(this.getNom() + " " + this.getPuntsTotals() + "\n");
+
+            writer.write(this.getNom() + "," + this.getPuntsTotals() + "\n");
 
             // Cierra el archivo
             writer.close();
 
-            System.out.println("Los datos del jugador han sido guardados en el archivo jugador.txt");
+            System.out.println("Les dades han sigut guardades.");
         } catch (IOException e) {
-            System.out.println("Ha ocurrido un error al guardar los datos del jugador en el archivo jugador.txt");
+            System.out.println("Ha succeit un error a l'hora de guardar les dades");
             e.printStackTrace();
         }
     }

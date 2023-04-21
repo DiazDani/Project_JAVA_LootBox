@@ -9,8 +9,9 @@ public class Item extends Carta {
         this.setNom("item");
     }
 
-    public void puntuacioPartida(Jugador jugador, Item item){
-        jugador.setPuntsPartida(jugador.getPuntsPartida()+item.getPreu());
+    @Override
+    public void puntuacioPartida(Jugador jugador, Carta carta){
+        jugador.setPuntsPartida(jugador.getPuntsPartida()+carta.getPreu());
     }
 
 }

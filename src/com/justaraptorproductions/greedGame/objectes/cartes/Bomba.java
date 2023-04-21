@@ -16,8 +16,11 @@ public class Bomba extends Carta{
         jugador.estaViu();
     }
 
-    public void puntuacioPartida(Jugador jugador, Bomba bomba){
-        bomba.efecte(jugador);
-        jugador.setPuntsPartida(jugador.getPuntsPartida()+bomba.getPreu());
+    public void puntuacioPartida(Jugador jugador, Carta carta){
+        carta.efecte(jugador);
+        jugador.setPuntsPartida(jugador.getPuntsPartida()+carta.getPreu());
+        if(jugador.getPuntsPartida()<0){
+            jugador.setPuntsPartida(0);
+        }
     }
 }

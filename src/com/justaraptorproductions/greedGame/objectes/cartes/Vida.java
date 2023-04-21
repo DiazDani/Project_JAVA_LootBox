@@ -4,12 +4,7 @@ import com.justaraptorproductions.greedGame.objectes.Jugador;
 
 public class Vida extends Carta {
 
-    /**
-     *
-     * @param tipus
-     * @param preu
-     * @param descripcio
-     */
+
 
     public Vida( String tipus, int preu, String descripcio) {
         super( tipus, preu, descripcio);
@@ -21,9 +16,9 @@ public class Vida extends Carta {
 
     }
 
-    public void puntuacioPartida(Jugador jugador, Vida vida){
-        vida.efecte(jugador);
-        jugador.setPuntsPartida(jugador.getPuntsPartida()+vida.getPreu());
+    public void puntuacioPartida(Jugador jugador, Carta carta){
+        carta.efecte(jugador);
+        jugador.setPuntsPartida(jugador.getPuntsPartida()+carta.getPreu());
     }
 
 }

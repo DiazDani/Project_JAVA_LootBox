@@ -13,4 +13,5 @@ public class Reaper extends Bomba{
     public void efecte(Jugador jugador){
         jugador.setVides(0);
     }
+
 }

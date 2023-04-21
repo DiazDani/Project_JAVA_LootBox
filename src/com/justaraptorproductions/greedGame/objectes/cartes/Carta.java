@@ -54,6 +54,10 @@ public abstract class Carta {
     public void efecte(Jugador jugador){
         //aqui afegirem les funcions de les cartes especials (ex: bomba)
     }
+    public void puntuacioPartida(Jugador jugador, Carta carta){
+        carta.efecte(jugador);
+        jugador.setPuntsPartida(jugador.getPuntsPartida()+carta.getPreu());
+    }
 
     /*ALTRES METODES*/
 

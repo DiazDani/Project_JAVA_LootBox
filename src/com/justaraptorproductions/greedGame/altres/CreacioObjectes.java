@@ -28,23 +28,16 @@ public class CreacioObjectes {
                     case "Bomba":
 
                         mazo.add( new Bomba(nom, preu, descripcio));
-                        System.out.println("funcan las bombas");
+
                         break;
                     case "Vida":
                         mazo.add(new Vida(nom, preu, descripcio));
-
-
-                        System.out.println("funcan las vidas");
                         break;
                     case "Reaper":
                         mazo.add(new Reaper(nom, preu, descripcio));
-
-                        System.out.println("funcan la muerte");
                         break;
                     case "Item":
                         mazo.add(new Item(nom, preu, descripcio));
-
-                        System.out.println("funcan los items");
                         break;
                     default:
                         System.out.println("Nom de l'objecte no valid: " + nom);
@@ -56,10 +49,7 @@ public class CreacioObjectes {
                 FileNotFoundException e) {
             System.out.println("Arxiu no trobat: " + e.getMessage());
         }
-        for (int i = 0; i < mazo.size(); i++) {
-            System.out.println(mazo.get(i).getTipus());
-        }
-        System.out.println(mazo.size());
+
 
     }
 

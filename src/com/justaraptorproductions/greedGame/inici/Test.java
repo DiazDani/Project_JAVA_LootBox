@@ -20,7 +20,7 @@ public class Test {
         Item i1 = new Item("tem", 100,"sopa");
 
         Jugador.carregarPartida("files/guardarPartida.txt");
-        j1.guardarDatos();
+        j1.guardarDades();
        /* while (j1.estaViu()){
             i1.puntuacioPartida(j1, i1);
             b1.puntuacioPartida(j1, b1);
