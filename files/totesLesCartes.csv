@@ -2,6 +2,9 @@ Bomba,-500,Una bomba petita et fa perdre una vida
 Bomba,-1000,Una granada et fa perdre una vida
 Bomba,-1500,Una bomba potent et fa perdre una vida
 Bomba,-2000,Una granada et fa perdre una vida
+Bomba,-1000,Una granada et fa perdre una vida
+Bomba,-1500,Una bomba potent et fa perdre una vida
+Bomba,-2000,Una granada et fa perdre una vida
 Bomba,-2500,Una bomba potent et fa perdre una vida
 Vida,1000,Guanyes una vida extra
 Item,500,Una petita gran suma
@@ -12,6 +15,20 @@ Item,700,Pagament decent
 Item,700,Pagament decent
 Item,300,Una moneda al terra
 Item,300,Una moneda al terra
+Item,300,Una moneda al terra
+Item,400,Calderilla
+Item,400,Calderilla
+Item,400,Calderilla
+Item,1000,Gran premi
+Item,1000,Gran premi
+Item,500,Una petita gran suma
+Item,500,Una petita gran suma
+Item,500,Una petita gran suma
+Item,700,Pagament decent
+Item,700,Pagament decent
+Item,700,Pagament decent
+Item,300,Una moneda al terra
+Vida,1000,Guanyes una vida extra
 Item,300,Una moneda al terra
 Item,400,Calderilla
 Item,400,Calderilla

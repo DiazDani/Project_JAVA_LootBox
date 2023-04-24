@@ -74,7 +74,6 @@ public class Game {
             }
             else if (resposta=='g'||resposta=='G'){
                 jugador.guardarDades();
-                break;
             }else if (resposta=='e'||resposta=='E'){
                 System.out.println("Gracies per jugar");
                 break;

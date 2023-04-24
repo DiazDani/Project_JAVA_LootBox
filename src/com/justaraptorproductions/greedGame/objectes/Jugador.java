@@ -87,7 +87,7 @@ public class Jugador {
 
             writer.write(this.getNom() + "," + this.getPuntsTotals() + "\n");
 
-            // Cierra el archivo
+
             writer.close();
 
             System.out.println("Les dades han sigut guardades.");
