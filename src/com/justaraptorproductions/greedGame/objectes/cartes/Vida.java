@@ -23,15 +23,9 @@ public class Vida extends Carta {
         this.setNom("Vida extra");
     }
 
-    public void efecte(Jugador jugador){
-        jugador.setVides(jugador.getVides()+1);
 
-    }
 
-    @Override
-    public void puntuacioPartida(Jugador jugador, Carta carta){
-        carta.efecte(jugador);
-        jugador.setPuntsPartida(jugador.getPuntsPartida()+carta.getPreu());
-    }
+
+
 
 }

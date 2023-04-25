@@ -42,8 +42,7 @@ public class CreacioObjectes {
             }
 
             scanner.close();
-        } catch (
-                FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("Arxiu no trobat: " + e.getMessage());
         }
 

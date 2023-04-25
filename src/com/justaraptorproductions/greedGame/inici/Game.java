@@ -35,7 +35,7 @@ public class Game {
                     
                     A) Jugar
                     
-                    G) Guardar partida i sortir
+                    G) Guardar partida 
                     
                     E) Sortir del programa
                     

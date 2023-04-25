@@ -72,7 +72,7 @@ public abstract class Carta {
      */
 
     public void efecte(Jugador jugador){
-
+        jugador.setVides(jugador.getVides()+1);
     }
 
     /**

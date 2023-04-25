@@ -25,5 +25,9 @@ public class Reaper extends Bomba{
     public void efecte(Jugador jugador){
         jugador.setVides(0);
     }
+    @Override
+    public void puntuacioPartida(Jugador jugador, Carta carta){
+        carta.efecte(jugador);
+    }
 
 }

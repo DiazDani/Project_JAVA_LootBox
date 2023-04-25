@@ -36,4 +36,5 @@ public class Bomba extends Carta{
             jugador.setPuntsPartida(0);
         }
     }
+
 }

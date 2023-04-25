@@ -19,7 +19,7 @@ public class BuclePrincipal {
      * Mazo de cartes del joc. D'aqui es treuen les diferentes cartes.
      */
     public static void TreureCarta(Jugador jugador,CreacioObjectes creacioObjectes) {
-        int seleccio =rng.nextInt(0,37);
+        int seleccio =rng.nextInt(0,creacioObjectes.getMazo().size()-1);
         creacioObjectes.getMazo().get(seleccio).puntuacioPartida(jugador,creacioObjectes.getMazo().get(seleccio));
         System.out.println("Vides restants: "+jugador.getVides()+"         Punts:"+jugador.getPuntsPartida());
         System.out.println("----------------------------------------------------------\n\n");
